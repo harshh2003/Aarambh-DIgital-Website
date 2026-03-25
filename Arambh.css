@@ -97,7 +97,7 @@ nav a:hover {
 
 .quote {
 background: linear-gradient(rgba(17, 17, 16, 0.179)),
-url(Images/jigjag.jpeg);
+url(images/jigjag.jpeg);
 color:white;
 border:none;
 font-weight: bold;
@@ -170,7 +170,7 @@ margin:auto;
 
 .card{
 background: linear-gradient(rgba(22, 22, 21, 0.57)),
-url("Images/jigjag.jpeg");
+url("images/jigjag.jpeg");
 padding:30px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(106, 102, 102, 0.1);
@@ -201,7 +201,7 @@ margin-bottom:15px;
 .clients-section{
 padding:20px;
 background:  linear-gradient(45deg, #1f1d1d, #121212);
-/* url("Images/jigjag.jpeg"); */
+/* url("images/jigjag.jpeg"); */
 text-align:center;
 margin-left:calc(-50vw + 50%);
 margin-right:calc(-50vw + 50%);
@@ -292,7 +292,7 @@ font-size:18px;
 
 /* footer{
 background: linear-gradient(rgba(22, 22, 21, 0.57)),
-url("Images/jigjag.jpeg");
+url("images/jigjag.jpeg");
 color:white;
 font-weight: bold;
 font-size: larger;
@@ -382,7 +382,7 @@ transform:translateX(-50%);
   margin-left: calc(-50vw + 50%);
   padding: 15px 50px;
   background: linear-gradient(rgba(22, 22, 21, 0.57)),
-  url(Images/jigjag.jpeg);
+  url(images/jigjag.jpeg);
 
   display: flex;
   justify-content: space-between;

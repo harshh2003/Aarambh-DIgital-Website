@@ -103,7 +103,7 @@ nav a:hover {
 
 .quote {
 background: linear-gradient(rgba(17, 17, 16, 0.179)),
-url(Images/jigjag.jpeg);
+url(images/jigjag.jpeg);
 color:white;
 border:none;
 font-weight: bold;
@@ -217,7 +217,7 @@ transition: all 0.3 ease;
   transform: translateY(0) rotate(0deg);
 }
 
-/* Image inside phone */
+/* image inside phone */
 .phone img {
   width: 100%;
   height: 100%;
