@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect With Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="strr.css">
+</head>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<script>
+const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let ringX = mouseX;
+let ringY = mouseY;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  dot.style.top = mouseY + "px";
+  dot.style.left = mouseX + "px";
+});
+
+function animate() {
+  ringX += (mouseX - ringX) * 0.7;
+  ringY += (mouseY - ringY) * 0.7;
+
+  ring.style.top = ringY + "px";
+  ring.style.left = ringX + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="Images/AD.logo.gif" alt="logo" class="logo-gif">
+</div>
+
+<nav>
+<a href="Arambh.html">Home</a>
+<a href="Arambh.html"services>Services</a>
+<a href="Portfolio.html" target="_blank">Portfolio</a>
+<a href="#" id="contactBtn">Contact</a>
+
+<button class="quote">GET A FREE QUOTE</button>
+</nav>
+
+</header>
+
+<section class="contact">
+
+    <h1>Let's <span class="highlight">AARAMBH</span> your business digitally.</h1>
+    <p>From strategies to execution, we handle it all.<br>
+        Your brand's digital journey starts here.</p>
+
+</section>
+
+<section class="contact-section" id="contact">
+
+  <div class="contact-container">
+
+    <div class="contact-left">
+
+    <h2 class="office-title">WE HAVE OUR OFFICES IN</h2>
+
+    <div class="office-box">
+        
+        <div class="office-city">
+            <span></span>
+        </div>
+
+        <div class="office-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3547.6260217860117!2d78.01731407545056!3d27.230888976458992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDEzJzUxLjIiTiA3OMKwMDEnMTEuNiJF!5e0!3m2!1sen!2sin!4v1773914962524!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="office-info">
+            <h3>AGRA</h3>
+            <p>
+                19, Krishna Vihar, Karamyogi, Kamla Nagar, Agra 282005 
+            </p>
+            <button class="map-btn">View on Map</button>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+
+      <form id="contactForm">
+
+        <div class="row">
+          <input type="text" id="name" placeholder="Full Name">
+          <input type="email" id="email" placeholder="Email Address">
+        </div>
+
+        <div class="row">
+          <input type="text" id="phone" placeholder="Phone Number">
+          <select id="service">
+            <option>Select a Service</option>
+            <option>Social Media Marketing</option>
+            <option>Website Development</option>
+          </select>
+        </div>
+
+        <input type="text" id="subject" placeholder="Subject">
+
+        <textarea id="message" placeholder="Tell us about your project..."></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="main-footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-about">
+      <p>
+        Aarambh Digital is a digital marketing company that believes in bringing
+        solutions and growth-hacking answers for our end-clients.
+      </p>
+
+      <div class="social-icons">
+        <a href="" target="_blank">
+        <img src="Images/wassup.jpeg" alt="WhatsApp">
+        </a>
+        <a href="" target="_blank">
+        <img src="Images/Ig.jpeg" alt="Instagram">
+        </a>
+        <a href="" target="_blank">
+        <img src="Images/fb.jpeg" alt="Facebook">
+        </a>
+        <a href="" target="_blank">
+        <img src="Images/Ln.PNG" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-links">
+      <h3>Our Services</h3>
+      <ul>
+        <li>Social Media Marketing</li>
+        <li>Performance Marketing</li>
+        <li>Website Development</li>
+        <li>Graphic Design</li>
+        <li>Video Creation</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-contact" id="contact-info">
+      <h3>Contact Info</h3>
+      <p>info@aarambhdigital.com</p>
+      <p>+91 9876543210</p>
+      <p>India</p>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="footer-payment">
+      <h3>Payment Accept</h3>
+      <div class="payment-icons">
+        <img src="Images/Gpay.jpeg"
+        alt="Paytm">
+        <img src="Images/HDFC.png"
+        alt="UPI">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+  <span class="left-text">© 2026 Aarambh Digital. All Rights Reserved.</span>
+  <span class="right-text">
+    <a href="Privacy.html" class="footer-link">Privacy Policy</a>
+    <a href="terms.html" class="footer-link">Terms & Conditions</a>
+  </span>
+</div>
+
+</footer>
+
+  <!-- your whole website content -->
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+  <script>
+window.addEventListener("load", function() {
+
+  if (window.location.hash === "#contact-info") {
+    const section = document.getElementById("contact-info");
+
+    if (!section) return;
+
+    // Scroll again to ensure correct position
+    section.scrollIntoView({ behavior: "smooth" });
+
+    // Add highlight
+    section.classList.add("highlight-contact");
+
+    // Remove after 2 sec
+    setTimeout(() => {
+      section.classList.remove("highlight-contact");
+    }, 2000);
+  }
+
+});
+</script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    const res = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name, email, phone, service, subject, message
+      })
+    });
+
+    const data = await res.text();
+    alert(data);
+  } catch (err) {
+    alert("Error sending message");
+  }
+});
+</script>
+
+</body>
+</html>

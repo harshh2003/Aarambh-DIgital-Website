@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aarambh Digital</title>
+
+<link rel="stylesheet" href="Arambh.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<script>
+  
+const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let ringX = mouseX;
+let ringY = mouseY;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  dot.style.top = mouseY + "px";
+  dot.style.left = mouseX + "px";
+});
+
+function animate() {
+  ringX += (mouseX - ringX) * 0.7;
+  ringY += (mouseY - ringY) * 0.7;
+
+  ring.style.top = ringY + "px";
+  ring.style.left = ringX + "px";
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+</script>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="Images/AD.logo.gif" alt="logo" class="logo-gif">
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="Portfolio.html" target="_blank">Portfolio</a>
+<a href="sty.html#contact-info" target="_blank">Contact</a>
+
+<a href="sty.html" target="_blank">
+<button class="quote">GET A FREE QUOTE</button>
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<h1>Grow Your Business Digitally</h1>
+
+<p>We help brands grow with powerful marketing strategies and creative design.</p>
+
+<a href="sty.html">
+<button>Start Your Project</button>
+</a>
+
+</section>
+
+
+<section class="services" id="services">
+
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<i class="fa-solid fa-share-nodes"></i>
+<h3>Social Media Marketing</h3>
+<p>Grow your brand presence on Instagram, Facebook and LinkedIn.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bullhorn"></i>
+<h3>Performance Marketing</h3>
+<p>Drive high-quality leads through optimized advertising campaigns.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-pen-ruler"></i>
+<h3>Creative Designing</h3>
+<p>Professional graphics and branding for your business.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code"></i>
+<h3>Website Development</h3>
+<p>Modern websites designed to convert visitors into customers.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-star"></i>
+<h3>Online Reputation</h3>
+<p>Manage and improve your brand reviews and online reputation.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-video"></i>
+<h3>Video & Reels Creation</h3>
+<p>Engaging short videos and reels for social media growth.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-hand-holding-heart"></i>
+<h3>Wedding Content Creations</h3>
+<p>Creating aesthetic wedding reels & decor highlights.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-id-card"></i>
+<h3>Wedding Invites & Graphics</h3>
+<p>Creative Wedding Invites & Beautiful Wedding Graphics.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="testimonial-section">
+
+<h2>What Our Client's Say About Us</h2>
+
+<div class="swiper mySwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide testimonial-card">
+<h3>Kushagar Dudeja</h3>
+<span>Business Owner</span>
+<p>
+RoshanCar Agra consistently partners with the Aarambh Digital team to drive impactful digital marketing strategies.
+</p>
+</div>
+
+<div class="swiper-slide testimonial-card">
+<h3>Manoj Jadaun</h3>
+<span>Business Owner</span>
+<p>
+Their digital expertise helped us achieve rapid and measurable growth.
+</p>
+</div>
+
+<div class="swiper-slide testimonial-card">
+<h3>Ankur Agarwal</h3>
+<span>Business Owner</span>
+<p>
+Aarambh Digital's marketing strategies drove impressive growth for our business in a short time.
+</p>
+</div>
+
+</div>
+
+<div class="swiper-pagination"></div>
+
+</div>
+
+</section>
+
+
+<section class="clients-section">
+
+<h2>Who are Happy with Our Services</h2>
+
+<div class="logo-slider">
+
+<div class="logo-track">
+
+<img src="Images/Silver.jpeg">
+<img src="Images/Motors.jpeg">
+<img src="Images/AR.jpeg">
+<img src="Images/LCL.png">
+<img src="Images/RC.jpeg">
+<img src="Images/Orane.jpeg">
+<img src="Images/BC.jpeg">
+
+<img src="Images/Silver.jpeg">
+<img src="Images/Motors.jpeg">
+<img src="Images/AR.jpeg">
+<img src="Images/LCL.png">
+<img src="Images/RC.jpeg">
+<img src="Images/Orane.jpeg">
+<img src="Images/BC.jpeg">
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- <footer>
+
+<p>© 2026 Aarambh Digital. All Rights Reserved.</p>
+
+</footer> -->
+
+<div class="footer-bottom">
+  <span class="left-text">© 2026 Aarambh Digital. All Rights Reserved.</span>
+  <span class="right-text">
+    <a href="Privacy.html" class="footer-link">Privacy Policy</a>
+    <a href="terms.html" class="footer-link">Terms & Conditions</a>
+  </span>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  loop: true,
+
+  speed: 10000,
+
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+
+  freeMode: {
+    enabled: true,
+    momentum: false
+  },
+
+  grabCursor: true,
+});
+
+</script>
+
+<script>
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 100) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
+
+</body>
+</html>
