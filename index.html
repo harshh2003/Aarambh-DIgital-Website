@@ -56,22 +56,27 @@ animate();
 <body>
 
 <header>
-
 <div class="logo">
 <img src="images/AD.logo.gif" alt="logo" class="logo-gif">
 </div>
 
+<div class="nav-container">
 <nav>
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="Portfolio.html" target="_blank">Portfolio</a>
 <a href="sty.html#contact-info" target="_blank">Contact</a>
+</nav>
 
 <a href="sty.html" target="_blank">
 <button class="quote">GET A FREE QUOTE</button>
 </a>
+</div>
 
-</nav>
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+<div class="overlay"></div>
 
 </header>
 
@@ -239,9 +244,8 @@ Aarambh Digital's marketing strategies drove impressive growth for our business 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
+  slidesPerView: 1,   // 🔥 important
   spaceBetween: 10,
   loop: true,
 
@@ -253,13 +257,11 @@ var swiper = new Swiper(".mySwiper", {
   },
 
   freeMode: {
-    enabled: true,
-    momentum: false
+    enabled: false   // ❌ remove free scroll
   },
 
   grabCursor: true,
 });
-
 </script>
 
 <script>
@@ -271,6 +273,39 @@ window.addEventListener("scroll", function () {
   } else {
     header.classList.remove("scrolled");
   }
+});
+</script>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navContainer = document.querySelector(".nav-container");
+const overlay = document.querySelector(".overlay");
+const icon = toggle.querySelector("i");
+
+overlay.addEventListener("click", () => {
+  navContainer.classList.remove("active");
+  overlay.classList.remove("active");
+
+  // optional: reset icon
+  const icon = toggle.querySelector("i");
+  icon.classList.add("fa-bars");
+  icon.classList.remove("fa-xmark");
+});
+
+toggle.addEventListener("click", () => {
+  navContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-xmark");
+});
+
+overlay.addEventListener("click", () => {
+  navContainer.classList.remove("active");
+  overlay.classList.remove("active");
+
+  icon.classList.add("fa-bars");
+  icon.classList.remove("fa-xmark");
 });
 </script>
 

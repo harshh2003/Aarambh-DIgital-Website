@@ -15,6 +15,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <div class="cursor-dot"></div>
@@ -62,17 +65,24 @@ animate();
 <img src="images/AD.logo.gif" alt="logo" class="logo-gif">
 </div>
 
+<div class="nav-container">
 <nav>
 <a href="index.html">Home</a>
 <a href="index.html">Services</a>
 <a href="Portfolio.html">Portfolio</a>
 <a href="sty.html#contact-info" target="_blank">Contact</a>
+</nav>
 
 <a href="sty.html" target="_blank">
 <button class="quote">GET A FREE QUOTE</button>
 </a>
+</div>
 
-</nav>
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="overlay"></div>
 
 </header>
 
@@ -263,6 +273,37 @@ window.addEventListener("scroll", function () {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
+  }
+});
+</script>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navContainer = document.querySelector(".nav-container");
+const overlay = document.querySelector(".overlay");
+const icon = toggle.querySelector("i");
+
+overlay.addEventListener("click", () => {
+  navContainer.classList.remove("active");
+  overlay.classList.remove("active");
+
+  // optional: reset icon
+  const icon = toggle.querySelector("i");
+  icon.classList.add("fa-bars");
+  icon.classList.remove("fa-xmark");
+});
+
+toggle.addEventListener("click", () => {
+  navContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  // 🔥 FIX ICON SWITCH
+  if (navContainer.classList.contains("active")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.add("fa-bars");
+    icon.classList.remove("fa-xmark");
   }
 });
 </script>

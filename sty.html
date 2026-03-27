@@ -7,12 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="strr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
 <script>
+  
 const dot = document.querySelector(".cursor-dot");
 const ring = document.querySelector(".cursor-ring");
 
@@ -41,6 +44,7 @@ function animate() {
 }
 
 animate();
+
 </script>
 
 <body>
@@ -51,16 +55,27 @@ animate();
 <img src="images/AD.logo.gif" alt="logo" class="logo-gif">
 </div>
 
+<div class="nav-container">
 <nav>
 <a href="index.html">Home</a>
-<a href="index.html"services>Services</a>
-<a href="Portfolio.html" target="_blank">Portfolio</a>
-<a href="#" id="contactBtn">Contact</a>
-
-<button class="quote">GET A FREE QUOTE</button>
+<a href="index.html#services">Services</a>
+<a href="Portfolio.html">Portfolio</a>
+<a href="#contact">Contact</a>
 </nav>
 
+<a href="sty.html" target="">
+<button class="quote">GET A FREE QUOTE</button>
+</a>
+</div>
+
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
+</div>
+<div class="overlay"></div>
+
 </header>
+
+<div class="overlay"></div>
 
 <section class="contact">
 
@@ -175,7 +190,7 @@ animate();
     <!-- CONTACT -->
     <div class="footer-contact" id="contact-info">
       <h3>Contact Info</h3>
-      <p>support@aarambhdigital.com</p>
+      <p class="email">support@aarambhdigital.com</p>
       <p>+91 8445552025</p>
       <p>India</p>
     </div>
@@ -203,7 +218,27 @@ animate();
 
 </footer>
 
-  <!-- your whole website content -->
+  <script>
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,   // 🔥 important
+  spaceBetween: 10,
+  loop: true,
+
+  speed: 10000,
+
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+
+  freeMode: {
+    enabled: false   // ❌ remove free scroll
+  },
+
+  grabCursor: true,
+});
+</script>
+
 
   <script>
     window.addEventListener("scroll", function () {
@@ -267,6 +302,39 @@ document.getElementById("contactForm").addEventListener("submit", async function
   } catch (err) {
     alert("Error sending message");
   }
+});
+</script>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navContainer = document.querySelector(".nav-container");
+const overlay = document.querySelector(".overlay");
+const icon = toggle.querySelector("i");
+
+overlay.addEventListener("click", () => {
+  navContainer.classList.remove("active");
+  overlay.classList.remove("active");
+
+  // optional: reset icon
+  const icon = toggle.querySelector("i");
+  icon.classList.add("fa-bars");
+  icon.classList.remove("fa-xmark");
+});
+
+toggle.addEventListener("click", () => {
+  navContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-xmark");
+});
+
+overlay.addEventListener("click", () => {
+  navContainer.classList.remove("active");
+  overlay.classList.remove("active");
+
+  icon.classList.add("fa-bars");
+  icon.classList.remove("fa-xmark");
 });
 </script>
 
