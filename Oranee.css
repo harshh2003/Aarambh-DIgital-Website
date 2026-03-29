@@ -51,6 +51,7 @@ transform:translate(-50%,-50%);
 /* HEADER */
 
 header{
+  border-bottom: 2px solid rgb(153, 144, 140);
   position: fixed;
   width: 100%;
   top: 0;
@@ -747,6 +748,21 @@ body {
   line-height: 1.4; /* optional: tighter text */
 }
 
+.whatsapp-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 20px;
+    border-radius: 50%;
+    /* background: #25D366; clean background */
+  }
+
+  .whatsapp-icon {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover;
+    display: block;
+  }
+
 }
 
 /* DESKTOP FIX */
@@ -766,4 +782,34 @@ body {
 
 .nav-container .quote {
   margin-left: 0; /* reset */
+}
+
+
+
+
+
+/* WhatsApp Button - Desktop + Mobile */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Icon */
+.whatsapp-icon {
+  width: 80px;
+  height: 80px;
 }

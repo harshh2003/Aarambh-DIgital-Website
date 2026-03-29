@@ -56,6 +56,7 @@ animate();
 <body>
 
 <header>
+  
 <div class="logo">
 <img src="images/AD.logo.gif" alt="logo" class="logo-gif">
 </div>
@@ -66,6 +67,7 @@ animate();
 <a href="#services">Services</a>
 <a href="Portfolio.html" target="_blank">Portfolio</a>
 <a href="sty.html#contact-info" target="_blank">Contact</a>
+<a href="" target="_blank">Blog</a>
 </nav>
 
 <a href="sty.html" target="_blank">
@@ -82,14 +84,14 @@ animate();
 
 
 <section class="hero">
+  
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="Video/home.front.mp4" type="video/mp4">
+  </video>
 
-<h1>Grow Your Business Digitally</h1>
-
-<p>We help brands grow with powerful marketing strategies and creative design.</p>
-
-<a href="sty.html">
-<button>Start Your Project</button>
-</a>
+  <div class="hero-content">
+  <h1>Grow Your Business With Aarambh Digital</h1>
+  </div>
 
 </section>
 
@@ -232,6 +234,24 @@ Aarambh Digital's marketing strategies drove impressive growth for our business 
 
 </footer> -->
 
+<section class="scroll-text">
+  <div class="scroll-track">
+    <span>
+      Aarambh Digital - Digital Marketing Agency in Agra • 
+      Aarambh Digital - Digital Marketing Agency in Agra • 
+      Aarambh Digital - Digital Marketing Agency in Agra •
+      Aarambh Digital - Digital Marketing Agency in Agra •
+    </span>
+
+    <span>
+      Aarambh Digital - Digital Marketing Agency in Agra • 
+      Aarambh Digital - Digital Marketing Agency in Agra • 
+      Aarambh Digital - Digital Marketing Agency in Agra •
+      Aarambh Digital - Digital Marketing Agency in Agra •
+    </span>
+  </div>
+</section>
+
 <div class="footer-bottom">
   <span class="left-text">© 2026 Aarambh Digital. All Rights Reserved.</span>
   <span class="right-text">
@@ -307,6 +327,27 @@ overlay.addEventListener("click", () => {
   icon.classList.add("fa-bars");
   icon.classList.remove("fa-xmark");
 });
+</script>
+
+<a href="https://wa.me/918445552025" target="_blank" class="whatsapp-btn">
+  <img src="images/cta.wassup.webp" class="whatsapp-icon">
+</a>
+
+<script id="k8t1q2">
+let ticker = document.querySelector(".scroll-track");
+
+let scrollSpeed = 0;
+
+window.addEventListener("scroll", () => {
+  scrollSpeed = window.scrollY * 0.05; // adjust intensity
+});
+
+function animateTicker() {
+  ticker.style.transform = `translateX(${-scrollSpeed}px)`;
+  requestAnimationFrame(animateTicker);
+}
+
+animateTicker();
 </script>
 
 </body>
