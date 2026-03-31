@@ -61,6 +61,8 @@ animate();
 <a href="index.html#services">Services</a>
 <a href="Portfolio.html">Portfolio</a>
 <a href="#contact">Contact</a>
+<a href="aboutus.html" target="_blank">About</a>
+<a href="Blog.html" target="">Blog</a>
 </nav>
 
 <a href="sty.html" target="">
@@ -108,7 +110,6 @@ animate();
             <p>
                 19, Krishna Vihar, Karamyogi, Kamla Nagar, Agra 282005 
             </p>
-            <button class="map-btn">View on Map</button>
         </div>
 
     </div>
@@ -119,29 +120,31 @@ animate();
     <div class="contact-form">
       <h2>Send Us a Message</h2>
 
-      <form id="contactForm">
+      <form action="https://forms.un-static.com/forms/26d3a675ce095d1c3995cf9aaed165c0dd2e3600" method="POST">
 
-        <div class="row">
-          <input type="text" id="name" placeholder="Full Name">
-          <input type="email" id="email" placeholder="Email Address">
-        </div>
+        <input type="hidden" name="_redirect" value="https://aarambhdigital.com/sty.html">
 
-        <div class="row">
-          <input type="text" id="phone" placeholder="Phone Number">
-          <select id="service">
-            <option>Select a Service</option>
-            <option>Social Media Marketing</option>
-            <option>Website Development</option>
-          </select>
-        </div>
+  <div class="row">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+  </div>
 
-        <input type="text" id="subject" placeholder="Subject">
+  <div class="row">
+    <input type="text" name="phone" placeholder="Phone Number">
+    <select name="service">
+      <option>Select a Service</option>
+      <option>Social Media Marketing</option>
+      <option>Website Development</option>
+    </select>
+  </div>
 
-        <textarea id="message" placeholder="Tell us about your project..."></textarea>
+  <input type="text" name="subject" placeholder="Subject">
 
-        <button type="submit">Send Message</button>
+  <textarea name="message" placeholder="Tell us about your project..." required></textarea>
 
-      </form>
+  <button type="submit">Send Message</button>
+
+</form>
     </div>
 
   </div>
@@ -272,36 +275,6 @@ window.addEventListener("load", function() {
     }, 2000);
   }
 
-});
-</script>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const service = document.getElementById("service").value;
-  const subject = document.getElementById("subject").value;
-  const message = document.getElementById("message").value;
-
-  try {
-    const res = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name, email, phone, service, subject, message
-      })
-    });
-
-    const data = await res.text();
-    alert(data);
-  } catch (err) {
-    alert("Error sending message");
-  }
 });
 </script>
 
