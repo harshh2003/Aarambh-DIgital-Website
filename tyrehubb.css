@@ -138,6 +138,11 @@ transition: all 0.3 ease;
   background: #0f0f0f;
 }
 
+.case-hero h1 {
+  color: #6dfc9b;
+   transform: translateX(-190px);
+}
+
 /* dark overlay */
 .case-overlay {
   position: absolute;
@@ -174,7 +179,7 @@ transition: all 0.3 ease;
 }
 
 /* heading */
-.case-content h1 {
+.case-content h2 {
   font-size: 70px;
   font-weight: 900;
   color: white;
@@ -605,7 +610,7 @@ transition: all 0.3 ease;
 }
 
 /* FIX BIGGEST ISSUE (heading breaking badly) */
-.case-content h1 {
+.case-content h2 {
   font-size: 36px !important;
   line-height: 1.2;
   letter-spacing: 1px;

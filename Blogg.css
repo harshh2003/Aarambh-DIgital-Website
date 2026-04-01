@@ -141,8 +141,9 @@ transition: all 0.3 ease;
 }
 
 .hero-content h1 {
-  font-size: 48px;
-  color: #c9523dbf;
+  font-size: 25px;
+  color: #c7bebcbf;
+  transform: translateY(-190px) translateX(-67px);
 }
 
 .hero-content p {
