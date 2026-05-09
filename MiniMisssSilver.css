@@ -581,18 +581,31 @@ transition: all 0.3 ease;
 
 /* 🔥 PERFECT MOBILE HERO FIX */
 
-.case-hero {
+ .case-hero {
   margin-top: 70px;
-  padding: 80px 20px 50px;
+  padding: 60px 20px 50px;
+  min-height: auto;;
   height: auto;                 /* remove fixed height */
   display: flex;
+  flex-direction:column;
   align-items: center;
   justify-content: center;
+
+  text-align:center;
+  overflow:hidden;
+}
+
+.case-hero h1 {
+  font-size: 18px;
+  transform: none !important;   /* remove shifting */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* remove weird shifting */
 .case-content {
   transform: none !important;
+  width: 100%;
   max-width: 100%;
   text-align: center;           /* center looks premium */
 }
@@ -600,24 +613,34 @@ transition: all 0.3 ease;
 /* back button fix */
 .back-link {
   position: static !important;
+  left: auto !important;
+  top: auto !important;
+
   display: inline-block;
   margin-bottom: 20px;
+
   font-size: 14px;
-  letter-spacing: 1px;
+  letter-spacing: 1.4;
 }
 
 /* FIX BIGGEST ISSUE (heading breaking badly) */
 .case-content h2 {
   font-size: 36px !important;
-  line-height: 1.2;
+  line-height: 1.1;
   letter-spacing: 1px;
-  word-break: break-word;       /* prevents cut */
+
+  word-break: normal;       /* prevents cut */
+  overflow-wrap: break-word; /* allows breaking if really needed */
+
+  margin: 0 auto;              /* center heading */
+
 }
 
 /* brand text */
 .brand {
-  font-size: 16px;
-  margin-top: 15px;
+  font-size: 18px;
+  margin-top: 18px;
+  text-align: center;
   opacity: 0.8;
 }
 

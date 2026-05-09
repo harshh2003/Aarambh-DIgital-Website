@@ -172,9 +172,12 @@ transition: all 0.3 ease;
 
 
 
+
+
+
 /* BLOG BANNER FIXED (NOT FULL WIDTH) */
 .blog-banner {
-  max-width: 750px;   /* 🔥 controls width like real blog */
+  max-width: 1150px;   /* 🔥 controls width like real blog */
   margin: 110px auto 40px; /* center + spacing */
   padding: 0 20px;
   margin-bottom: -100px;
@@ -193,7 +196,7 @@ transition: all 0.3 ease;
  /* BLOG HERO */
 .blog-hero {
   padding: 140px 80px 60px;
-  background: #f9f9f9;
+  background: rgb(192 192 173 / 98%);
 }
 
 /* CONTAINER */
@@ -212,10 +215,54 @@ transition: all 0.3 ease;
   color: #000;
 }
 
+.blog-title2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
 
+.blog-title3 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
 
+.blog-title4 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
 
+.blog-title5 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
 
+.blog-title6 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.blog-title7 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.blog-title8 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
 
 /* DATE */
 .blog-meta {
@@ -518,6 +565,94 @@ body {
     object-fit: cover;
     display: block;
   }
+
+
+
+  /* =========================
+   SINGLE BLOG PAGE MOBILE FIX
+========================= */
+
+/* remove desktop spacing */
+.blog-container{
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* banner */
+.blog-banner{
+  margin: 95px 16px 20px !important;
+  padding: 0 !important;
+}
+
+.blog-banner h1{
+  font-size: 20px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.blog-banner img{
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* hero section */
+.blog-hero{
+  padding: 35px 18px !important;
+}
+
+/* MAIN TITLE */
+.blog-title{
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+
+  margin-bottom: 20px;
+
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* all subheadings */
+.blog-title2,
+.blog-title3,
+.blog-title4,
+.blog-title5,
+.blog-title6,
+.blog-title7,
+.blog-title8{
+  font-size: 24px !important;
+  line-height: 1.4;
+  margin-top: 30px;
+}
+
+/* paragraph */
+.blog-text p{
+  font-size: 17px !important;
+  line-height: 1.9 !important;
+
+  word-break: normal;
+  overflow-wrap: break-word;
+
+  margin-bottom: 20px;
+}
+
+/* share section */
+.blog-actions{
+  margin: 15px 0 25px;
+}
+
+.share-text{
+  font-size: 22px !important;
+}
+
+.share-icons{
+  top: 40px;
+}
+
+/* remove weird horizontal spacing */
+html,
+body{
+  overflow-x: hidden;
+}
 
 
 }
